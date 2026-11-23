@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>BREINWAR 3D — De Nazi-Jacht</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="wrap">
+  <canvas id="screen" width="480" height="300"></canvas>
+  <div id="crt"></div>
+
+  <div id="ov-menu" class="overlay">
+    <div class="panel">
+      <h1>BREINWAR&nbsp;3D</h1>
+      <div class="sub">DE NAZI-JACHT &mdash; een knieval aan Wolfenstein&nbsp;3D &amp; DOOM</div>
+      <div class="cols">
+        <div>
+          <h2>BESTURING</h2>
+          <table>
+            <tr><td>Muis</td><td>rondkijken</td></tr>
+            <tr><td>Klik / Ctrl</td><td>schieten</td></tr>
+            <tr><td>W A S D</td><td>lopen &amp; straffen</td></tr>
+            <tr><td>Shift</td><td>rennen</td></tr>
+            <tr><td>Spatie / E</td><td>deuren, pushwalls, uitgang</td></tr>
+            <tr><td>1 &ndash; 4</td><td>wapens wisselen</td></tr>
+            <tr><td>Tab</td><td>kaart aan/uit</td></tr>
+            <tr><td>Esc</td><td>pauze</td></tr>
+            <tr><td>M</td><td>geluid aan/uit</td></tr>
+          </table>
+        </div>
+        <div>
+          <h2>BONUSSEN</h2>
+          <table>
+            <tr><td class="c-red">+</td><td>gezondheid</td></tr>
+            <tr><td class="c-white">&#9632;</td><td>medkit (+25)</td></tr>
+            <tr><td class="c-green">&#9632;</td><td>ammunitie</td></tr>
+            <tr><td class="c-gold">&#9679;</td><td>schatten = score</td></tr>
+            <tr><td class="c-gold">&#9733;</td><td>RUSH: 20s dubbele schade</td></tr>
+            <tr><td class="c-green">&#9786;</td><td>extra leven</td></tr>
+            <tr><td class="c-gold">&#10752;</td><td>gouden sleutel</td></tr>
+            <tr><td class="c-silver">&#10752;</td><td>zilveren sleutel</td></tr>
+          </table>
+          <h2>TIPS</h2>
+          <div class="tip">Sommige muren zijn <b>pushwalls</b> — druk ertegen en gebruik ze.<br>
+          Dood alle vijanden en vind de <b class="c-green">groene uitgang</b>.</div>
+        </div>
+      </div>
+      <button id="btn-start">▶ KLIK OM TE SPELEN</button>
+      <div class="foot">Originele hommage — alle graphics &amp; geluid procedureel gegenereerd. Patrick W. Bömer · BrainFusion</div>
+    </div>
+  </div>
+
+  <div id="ov-intro" class="overlay hidden">
+    <div class="panel center">
+      <h1 id="intro-title">LEVEL 1</h1>
+      <div class="sub" id="intro-sub"></div>
+      <div class="tip" id="intro-tip"></div>
+      <button id="btn-intro">TEN STRIJD!</button>
+    </div>
+  </div>
+
+  <div id="ov-pause" class="overlay hidden">
+    <div class="panel center">
+      <h1>GEPAUZEERD</h1>
+      <button id="btn-resume">VERDER SPELEN</button>
+      <div class="tip">M = geluid · Tab = kaart</div>
+    </div>
+  </div>
+
+  <div id="ov-dead" class="overlay hidden">
+    <div class="panel center">
+      <h1 class="c-red">JE BENT DOOD!</h1>
+      <div class="sub" id="dead-sub"></div>
+      <button id="btn-dead">VOLGEND LEVEN</button>
+    </div>
+  </div>
+
+  <div id="ov-clear" class="overlay hidden">
+    <div class="panel center">
+      <h1 class="c-green">LEVEL GEHAALD!</h1>
+      <div class="sub" id="clear-stats"></div>
+      <button id="btn-clear">VOLGEND LEVEL</button>
+    </div>
+  </div>
+
+  <div id="ov-over" class="overlay hidden">
+    <div class="panel center">
+      <h1 class="c-red">GAME OVER</h1>
+      <div class="sub" id="over-score"></div>
+      <button id="btn-over">OPNIEUW</button>
+    </div>
+  </div>
+
+  <div id="ov-win" class="overlay hidden">
+    <div class="panel center">
+      <h1 class="c-gold">OORLOG GEWOON!</h1>
+      <div class="sub">De laatste Nazi is geveld. Heldhaftig, meneer Bömer.</div>
+      <div class="sub" id="win-score"></div>
+      <button id="btn-win">OPNIEUW</button>
+    </div>
+  </div>
+
+  <div id="errbox" class="hidden"></div>
+</div>
+<script src="js/assets.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/levels.js"></script>
+<script src="js/game.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
