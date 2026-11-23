@@ -486,7 +486,7 @@ class Game {
     g.fillText(String(this.health).padStart(3, ' ') + '%', 26, y0 + 38);
     // wapen
     g.fillStyle = '#aaa'; g.font = 'bold 10px monospace';
-    g.fillText('WAPE', 78, y0 + 12);
+    g.fillText('WAPEN', 78, y0 + 12);
     g.font = 'bold 15px monospace'; g.fillStyle = '#fff';
     g.fillText((this.inv.weapon + 1) + ' ' + WEAPONS[this.inv.weapon].short, 78, y0 + 28);
     if (this.rushT > 0) { g.fillStyle = '#fa0'; g.fillText('RUSH ' + Math.ceil(this.rushT), 78, y0 + 40); }
